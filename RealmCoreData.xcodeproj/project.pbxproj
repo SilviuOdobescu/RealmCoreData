@@ -14,7 +14,35 @@
 		2B094F231C5B6D5C00275896 /* RealmCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F211C5B6D5C00275896 /* RealmCoreData.xcdatamodeld */; };
 		2B094F251C5B6D5C00275896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B094F241C5B6D5C00275896 /* Assets.xcassets */; };
 		2B094F281C5B6D5C00275896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B094F261C5B6D5C00275896 /* LaunchScreen.storyboard */; };
+		2B094F331C5B6DBA00275896 /* Job+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F301C5B6DBA00275896 /* Job+CoreDataProperties.m */; };
+		2B094F341C5B6DBA00275896 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F321C5B6DBA00275896 /* Person+CoreDataProperties.m */; };
+		2B094F3A1C5B6DDD00275896 /* Job.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F371C5B6DDD00275896 /* Job.m */; };
+		2B094F3B1C5B6DDD00275896 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F391C5B6DDD00275896 /* Person.m */; };
+		2B094F411C5B6DF100275896 /* RealmJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F3E1C5B6DF100275896 /* RealmJob.m */; };
+		2B094F421C5B6DF100275896 /* RealmPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F401C5B6DF100275896 /* RealmPerson.m */; };
+		2B094F461C5B6E4B00275896 /* firstAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B094F441C5B6E4B00275896 /* firstAvatar.png */; };
+		2B094F471C5B6E4B00275896 /* secondAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B094F451C5B6E4B00275896 /* secondAvatar.png */; };
+		2B094F511C5B6E6D00275896 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F491C5B6E6D00275896 /* CoreDataManager.m */; };
+		2B094F521C5B6E6D00275896 /* MigrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F4C1C5B6E6D00275896 /* MigrationManager.m */; };
+		2B094F531C5B6E6D00275896 /* RealmDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F4E1C5B6E6D00275896 /* RealmDataManager.m */; };
+		2B094F541C5B6E6D00275896 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F501C5B6E6D00275896 /* ResultsViewController.m */; };
+		2B094F591C5B70CD00275896 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B094F571C5B70B400275896 /* Realm.framework */; };
+		2B094F5A1C5B70CD00275896 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B094F571C5B70B400275896 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B094F5B1C5B70CD00275896 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B094F5A1C5B70CD00275896 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2B094F121C5B6D5C00275896 /* RealmCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +56,30 @@
 		2B094F241C5B6D5C00275896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B094F271C5B6D5C00275896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B094F291C5B6D5C00275896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B094F2F1C5B6DBA00275896 /* Job+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Job+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2B094F301C5B6DBA00275896 /* Job+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Job+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2B094F311C5B6DBA00275896 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2B094F321C5B6DBA00275896 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2B094F361C5B6DDD00275896 /* Job.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Job.h; sourceTree = "<group>"; };
+		2B094F371C5B6DDD00275896 /* Job.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Job.m; sourceTree = "<group>"; };
+		2B094F381C5B6DDD00275896 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		2B094F391C5B6DDD00275896 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		2B094F3D1C5B6DF100275896 /* RealmJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmJob.h; sourceTree = "<group>"; };
+		2B094F3E1C5B6DF100275896 /* RealmJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmJob.m; sourceTree = "<group>"; };
+		2B094F3F1C5B6DF100275896 /* RealmPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmPerson.h; sourceTree = "<group>"; };
+		2B094F401C5B6DF100275896 /* RealmPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmPerson.m; sourceTree = "<group>"; };
+		2B094F441C5B6E4B00275896 /* firstAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstAvatar.png; sourceTree = "<group>"; };
+		2B094F451C5B6E4B00275896 /* secondAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondAvatar.png; sourceTree = "<group>"; };
+		2B094F481C5B6E6D00275896 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		2B094F491C5B6E6D00275896 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		2B094F4A1C5B6E6D00275896 /* DataLayerManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerManagerProtocol.h; sourceTree = "<group>"; };
+		2B094F4B1C5B6E6D00275896 /* MigrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MigrationManager.h; sourceTree = "<group>"; };
+		2B094F4C1C5B6E6D00275896 /* MigrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MigrationManager.m; sourceTree = "<group>"; };
+		2B094F4D1C5B6E6D00275896 /* RealmDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmDataManager.h; sourceTree = "<group>"; };
+		2B094F4E1C5B6E6D00275896 /* RealmDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmDataManager.m; sourceTree = "<group>"; };
+		2B094F4F1C5B6E6D00275896 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		2B094F501C5B6E6D00275896 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		2B094F571C5B70B400275896 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B094F591C5B70CD00275896 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +97,11 @@
 		2B094F091C5B6D5C00275896 = {
 			isa = PBXGroup;
 			children = (
+				2B094F561C5B709600275896 /* Frameworks */,
+				2B094F551C5B6E7600275896 /* Managers */,
+				2B094F431C5B6E4000275896 /* Images */,
+				2B094F3C1C5B6DE400275896 /* Realm classes */,
+				2B094F351C5B6DCD00275896 /* CoreData classes */,
 				2B094F141C5B6D5C00275896 /* RealmCoreData */,
 				2B094F131C5B6D5C00275896 /* Products */,
 			);
@@ -60,14 +118,13 @@
 		2B094F141C5B6D5C00275896 /* RealmCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				2B094F4F1C5B6E6D00275896 /* ResultsViewController.h */,
+				2B094F501C5B6E6D00275896 /* ResultsViewController.m */,
 				2B094F181C5B6D5C00275896 /* AppDelegate.h */,
 				2B094F191C5B6D5C00275896 /* AppDelegate.m */,
 				2B094F1B1C5B6D5C00275896 /* ViewController.h */,
 				2B094F1C1C5B6D5C00275896 /* ViewController.m */,
 				2B094F1E1C5B6D5C00275896 /* Main.storyboard */,
-				2B094F241C5B6D5C00275896 /* Assets.xcassets */,
-				2B094F261C5B6D5C00275896 /* LaunchScreen.storyboard */,
-				2B094F291C5B6D5C00275896 /* Info.plist */,
 				2B094F211C5B6D5C00275896 /* RealmCoreData.xcdatamodeld */,
 				2B094F151C5B6D5C00275896 /* Supporting Files */,
 			);
@@ -77,9 +134,70 @@
 		2B094F151C5B6D5C00275896 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B094F241C5B6D5C00275896 /* Assets.xcassets */,
+				2B094F261C5B6D5C00275896 /* LaunchScreen.storyboard */,
+				2B094F291C5B6D5C00275896 /* Info.plist */,
 				2B094F161C5B6D5C00275896 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B094F351C5B6DCD00275896 /* CoreData classes */ = {
+			isa = PBXGroup;
+			children = (
+				2B094F361C5B6DDD00275896 /* Job.h */,
+				2B094F371C5B6DDD00275896 /* Job.m */,
+				2B094F381C5B6DDD00275896 /* Person.h */,
+				2B094F391C5B6DDD00275896 /* Person.m */,
+				2B094F2F1C5B6DBA00275896 /* Job+CoreDataProperties.h */,
+				2B094F301C5B6DBA00275896 /* Job+CoreDataProperties.m */,
+				2B094F311C5B6DBA00275896 /* Person+CoreDataProperties.h */,
+				2B094F321C5B6DBA00275896 /* Person+CoreDataProperties.m */,
+			);
+			name = "CoreData classes";
+			sourceTree = "<group>";
+		};
+		2B094F3C1C5B6DE400275896 /* Realm classes */ = {
+			isa = PBXGroup;
+			children = (
+				2B094F3D1C5B6DF100275896 /* RealmJob.h */,
+				2B094F3E1C5B6DF100275896 /* RealmJob.m */,
+				2B094F3F1C5B6DF100275896 /* RealmPerson.h */,
+				2B094F401C5B6DF100275896 /* RealmPerson.m */,
+			);
+			name = "Realm classes";
+			sourceTree = "<group>";
+		};
+		2B094F431C5B6E4000275896 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2B094F441C5B6E4B00275896 /* firstAvatar.png */,
+				2B094F451C5B6E4B00275896 /* secondAvatar.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		2B094F551C5B6E7600275896 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2B094F4D1C5B6E6D00275896 /* RealmDataManager.h */,
+				2B094F4E1C5B6E6D00275896 /* RealmDataManager.m */,
+				2B094F481C5B6E6D00275896 /* CoreDataManager.h */,
+				2B094F491C5B6E6D00275896 /* CoreDataManager.m */,
+				2B094F4A1C5B6E6D00275896 /* DataLayerManagerProtocol.h */,
+				2B094F4B1C5B6E6D00275896 /* MigrationManager.h */,
+				2B094F4C1C5B6E6D00275896 /* MigrationManager.m */,
+			);
+			name = Managers;
+			path = RealmCoreData;
+			sourceTree = "<group>";
+		};
+		2B094F561C5B709600275896 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B094F571C5B70B400275896 /* Realm.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +210,8 @@
 				2B094F0E1C5B6D5C00275896 /* Sources */,
 				2B094F0F1C5B6D5C00275896 /* Frameworks */,
 				2B094F101C5B6D5C00275896 /* Resources */,
+				2B094F5B1C5B70CD00275896 /* Embed Frameworks */,
+				2B094F5C1C5B70E200275896 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -140,6 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B094F281C5B6D5C00275896 /* LaunchScreen.storyboard in Resources */,
+				2B094F461C5B6E4B00275896 /* firstAvatar.png in Resources */,
+				2B094F471C5B6E4B00275896 /* secondAvatar.png in Resources */,
 				2B094F251C5B6D5C00275896 /* Assets.xcassets in Resources */,
 				2B094F201C5B6D5C00275896 /* Main.storyboard in Resources */,
 			);
@@ -147,15 +269,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B094F5C1C5B70E200275896 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B094F0E1C5B6D5C00275896 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B094F421C5B6DF100275896 /* RealmPerson.m in Sources */,
+				2B094F541C5B6E6D00275896 /* ResultsViewController.m in Sources */,
 				2B094F1D1C5B6D5C00275896 /* ViewController.m in Sources */,
 				2B094F1A1C5B6D5C00275896 /* AppDelegate.m in Sources */,
+				2B094F3B1C5B6DDD00275896 /* Person.m in Sources */,
+				2B094F331C5B6DBA00275896 /* Job+CoreDataProperties.m in Sources */,
+				2B094F511C5B6E6D00275896 /* CoreDataManager.m in Sources */,
 				2B094F231C5B6D5C00275896 /* RealmCoreData.xcdatamodeld in Sources */,
+				2B094F531C5B6E6D00275896 /* RealmDataManager.m in Sources */,
+				2B094F341C5B6DBA00275896 /* Person+CoreDataProperties.m in Sources */,
 				2B094F171C5B6D5C00275896 /* main.m in Sources */,
+				2B094F411C5B6DF100275896 /* RealmJob.m in Sources */,
+				2B094F521C5B6E6D00275896 /* MigrationManager.m in Sources */,
+				2B094F3A1C5B6DDD00275896 /* Job.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +415,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmCoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Alfresco.RealmCoreData;
@@ -278,6 +430,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmCoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Alfresco.RealmCoreData;
