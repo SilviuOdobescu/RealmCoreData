@@ -9,6 +9,7 @@
 #import "RealmDataManager.h"
 #import "RealmJob.h"
 #import "RealmPerson.h"
+#import <UIKit/UIKit.h>
 
 @implementation RealmDataManager
 
@@ -60,6 +61,39 @@ static dispatch_once_t onceToken;
     [realm commitWriteTransaction];
     
     return newPerson;
+}
+
+- (void)insertInfoInRealm
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        RealmJob *firstJob = [RealmJob new];
+        firstJob.name = @"Developer";
+        RealmJob *secondJob = [RealmJob new];
+        secondJob.name = @"Manager";
+        
+        RealmPerson *firstPerson = [RealmPerson new];
+        firstPerson.name = @"John";
+        firstPerson.imageData = UIImagePNGRepresentation([UIImage imageNamed:@"firstAvatar"]);
+        
+        RealmPerson *secondPerson = [RealmPerson new];
+        secondPerson.name = @"Jane";
+        secondPerson.imageData = UIImagePNGRepresentation([UIImage imageNamed:@"secondAvatar"]);
+        
+        firstPerson.supervisor = secondPerson;
+        secondPerson.teamMembers = firstPerson;
+        firstPerson.job = firstJob;
+        secondPerson.job = secondJob;
+        
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm beginWriteTransaction];
+        [realm addOrUpdateObject:firstJob];
+        [realm addOrUpdateObject:secondJob];
+        [realm addOrUpdateObject:firstPerson];
+        [realm addOrUpdateObject:secondPerson];
+        [realm commitWriteTransaction];
+        
+    });
 }
 
 @end

@@ -11,4 +11,6 @@
 
 @interface RealmDataManager : NSObject < DataLayerManagerProtocol >
 
+- (void)insertInfoInRealm;
+
 @end

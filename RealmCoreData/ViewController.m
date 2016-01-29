@@ -27,6 +27,7 @@
     [coreDataManager insertInfoInCoreData];
     
     RealmDataManager *realmManager = [RealmDataManager sharedManager];
+    [realmManager insertInfoInRealm];
     
     NSMutableDictionary *mappingDict = [NSMutableDictionary new];
     
@@ -36,7 +37,20 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    if([segue.identifier isEqualToString:@"ShowCoreData"])
+    {
+        if([segue.destinationViewController respondsToSelector:@selector(loadCoreData)])
+        {
+            [segue.destinationViewController performSelector:@selector(loadCoreData)];
+        }
+    }
+    else if ([segue.identifier isEqualToString:@"ShowRealm"])
+    {
+        if([segue.destinationViewController respondsToSelector:@selector(loadRealm)])
+        {
+            [segue.destinationViewController performSelector:@selector(loadRealm)];
+        }
+    }
 }
 
 - (IBAction)convertToRealmButtonClicked:(id)sender

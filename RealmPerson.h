@@ -7,17 +7,18 @@
 //
 
 #import <Realm/Realm.h>
+#import <UIKit/UIKit.h>
 
 @class RealmJob;
 
 @interface RealmPerson : RLMObject
 
-@property NSString *uuid;
 @property NSData *imageData;
 @property NSString *name;
 @property RealmJob *job;
 @property RealmPerson *supervisor;
 @property RealmPerson *teamMembers;
+@property (readonly) UIImage *image;    //this property is ignored (aka not persisted)
 
 @end
 

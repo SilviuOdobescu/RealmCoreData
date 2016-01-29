@@ -14,13 +14,16 @@
 
 + (NSDictionary *)defaultPropertyValues
 {
-    return @{@"uuid" : [[NSUUID UUID] UUIDString],
-             @"name" : @"",
+    return @{@"name" : @"",
              @"imageData" : [NSData data]};
 }
 
 + (NSArray *)requiredProperties {
     return @[@"name", @"uuid", @"imageData"];
+}
+
++ (NSString *)primaryKey {
+    return @"name";
 }
 
 // Specify properties to ignore (Realm won't persist these)
@@ -29,5 +32,15 @@
 //{
 //    return @[];
 //}
+
+- (UIImage *)image
+{
+    UIImage *image = nil;
+    if (self.imageData)
+    {
+        image = [UIImage imageWithData:self.imageData];
+    }
+    return image;
+}
 
 @end

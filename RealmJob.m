@@ -14,12 +14,15 @@
 
 + (NSDictionary *)defaultPropertyValues
 {
-    return @{@"uuid" : [[NSUUID UUID] UUIDString],
-             @"name" : @""};
+    return @{@"name" : @""};
 }
 
 + (NSArray *)requiredProperties {
     return @[@"name"];
+}
+
++ (NSString *)primaryKey {
+    return @"name";
 }
 
 // Specify properties to ignore (Realm won't persist these)

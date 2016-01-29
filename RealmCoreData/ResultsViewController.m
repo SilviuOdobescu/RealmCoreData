@@ -8,6 +8,7 @@
 
 #import "ResultsViewController.h"
 #import "CoreDataManager.h"
+#import "RealmDataManager.h"
 #import "Person.h"
 
 @implementation TableCell
@@ -16,6 +17,7 @@
 
 @interface ResultsViewController ()
 
+@property (nonatomic) BOOL shouldLoadCoreData;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
 
@@ -30,7 +32,19 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.dataSource = [[CoreDataManager sharedManager] getArrayOfPersons];
+    id<DataLayerManagerProtocol> dataSourceManager;
+    
+    if(self.shouldLoadCoreData)
+    {
+        NSLog(@"==== loading Core Data");
+        dataSourceManager = [CoreDataManager sharedManager];
+    }
+    else
+    {
+        NSLog(@"==== loading Realm");
+        dataSourceManager = [RealmDataManager sharedManager];
+    }
+    self.dataSource = [dataSourceManager getArrayOfPersons];
     [self.tableView reloadData];
 }
 
@@ -51,5 +65,15 @@
     return self.dataSource.count;
 }
 
+#pragma mark - Private methods
+- (void)loadCoreData
+{
+    self.shouldLoadCoreData = YES;
+}
+
+- (void)LoadRealm
+{
+    self.shouldLoadCoreData = NO;
+}
 
 @end

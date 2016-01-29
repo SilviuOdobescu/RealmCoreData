@@ -12,7 +12,6 @@
 
 @interface RealmJob : RLMObject
 
-@property NSString *uuid;
 @property NSString *name;
 @property RealmPerson *person;
 
