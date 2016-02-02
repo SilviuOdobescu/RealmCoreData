@@ -43,4 +43,9 @@
     return image;
 }
 
+- (NSArray *)teamMembers
+{
+    return [self linkingObjectsOfClass:@"RealmPerson" forProperty:@"supervisor"];
+}
+
 @end

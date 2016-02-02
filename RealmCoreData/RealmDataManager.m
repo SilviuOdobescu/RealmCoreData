@@ -81,7 +81,6 @@ static dispatch_once_t onceToken;
         secondPerson.imageData = UIImagePNGRepresentation([UIImage imageNamed:@"secondAvatar"]);
         
         firstPerson.supervisor = secondPerson;
-        secondPerson.teamMembers = firstPerson;
         firstPerson.job = firstJob;
         secondPerson.job = secondJob;
         

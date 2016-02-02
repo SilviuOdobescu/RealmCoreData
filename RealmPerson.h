@@ -17,7 +17,7 @@
 @property NSString *name;
 @property RealmJob *job;
 @property RealmPerson *supervisor;
-@property RealmPerson *teamMembers;
+@property (readonly) NSArray *teamMembers; //this is the inverse of supervisor 
 @property (readonly) UIImage *image;    //this property is ignored (aka not persisted)
 
 @end
