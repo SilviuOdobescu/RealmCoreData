@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2B20161C6241DB00DCF673 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B20131C6241DB00DCF673 /* Person+CoreDataProperties.m */; };
+		1D2B20171C6241DB00DCF673 /* Job+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B20151C6241DB00DCF673 /* Job+CoreDataProperties.m */; };
 		2B094F171C5B6D5C00275896 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F161C5B6D5C00275896 /* main.m */; };
 		2B094F1A1C5B6D5C00275896 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F191C5B6D5C00275896 /* AppDelegate.m */; };
 		2B094F1D1C5B6D5C00275896 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F1C1C5B6D5C00275896 /* ViewController.m */; };
@@ -14,8 +16,6 @@
 		2B094F231C5B6D5C00275896 /* RealmCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F211C5B6D5C00275896 /* RealmCoreData.xcdatamodeld */; };
 		2B094F251C5B6D5C00275896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B094F241C5B6D5C00275896 /* Assets.xcassets */; };
 		2B094F281C5B6D5C00275896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B094F261C5B6D5C00275896 /* LaunchScreen.storyboard */; };
-		2B094F331C5B6DBA00275896 /* Job+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F301C5B6DBA00275896 /* Job+CoreDataProperties.m */; };
-		2B094F341C5B6DBA00275896 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F321C5B6DBA00275896 /* Person+CoreDataProperties.m */; };
 		2B094F3A1C5B6DDD00275896 /* Job.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F371C5B6DDD00275896 /* Job.m */; };
 		2B094F3B1C5B6DDD00275896 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F391C5B6DDD00275896 /* Person.m */; };
 		2B094F411C5B6DF100275896 /* RealmJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F3E1C5B6DF100275896 /* RealmJob.m */; };
@@ -45,6 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D2B20121C6241DB00DCF673 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1D2B20131C6241DB00DCF673 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1D2B20141C6241DB00DCF673 /* Job+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Job+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1D2B20151C6241DB00DCF673 /* Job+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Job+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2B094F121C5B6D5C00275896 /* RealmCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B094F161C5B6D5C00275896 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B094F181C5B6D5C00275896 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,10 +60,6 @@
 		2B094F241C5B6D5C00275896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B094F271C5B6D5C00275896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B094F291C5B6D5C00275896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B094F2F1C5B6DBA00275896 /* Job+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Job+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2B094F301C5B6DBA00275896 /* Job+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Job+CoreDataProperties.m"; sourceTree = "<group>"; };
-		2B094F311C5B6DBA00275896 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2B094F321C5B6DBA00275896 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2B094F361C5B6DDD00275896 /* Job.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Job.h; sourceTree = "<group>"; };
 		2B094F371C5B6DDD00275896 /* Job.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Job.m; sourceTree = "<group>"; };
 		2B094F381C5B6DDD00275896 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -145,14 +145,14 @@
 		2B094F351C5B6DCD00275896 /* CoreData classes */ = {
 			isa = PBXGroup;
 			children = (
+				1D2B20121C6241DB00DCF673 /* Person+CoreDataProperties.h */,
+				1D2B20131C6241DB00DCF673 /* Person+CoreDataProperties.m */,
+				1D2B20141C6241DB00DCF673 /* Job+CoreDataProperties.h */,
+				1D2B20151C6241DB00DCF673 /* Job+CoreDataProperties.m */,
 				2B094F361C5B6DDD00275896 /* Job.h */,
 				2B094F371C5B6DDD00275896 /* Job.m */,
 				2B094F381C5B6DDD00275896 /* Person.h */,
 				2B094F391C5B6DDD00275896 /* Person.m */,
-				2B094F2F1C5B6DBA00275896 /* Job+CoreDataProperties.h */,
-				2B094F301C5B6DBA00275896 /* Job+CoreDataProperties.m */,
-				2B094F311C5B6DBA00275896 /* Person+CoreDataProperties.h */,
-				2B094F321C5B6DBA00275896 /* Person+CoreDataProperties.m */,
 			);
 			name = "CoreData classes";
 			sourceTree = "<group>";
@@ -295,14 +295,14 @@
 				2B094F1D1C5B6D5C00275896 /* ViewController.m in Sources */,
 				2B094F1A1C5B6D5C00275896 /* AppDelegate.m in Sources */,
 				2B094F3B1C5B6DDD00275896 /* Person.m in Sources */,
-				2B094F331C5B6DBA00275896 /* Job+CoreDataProperties.m in Sources */,
 				2B094F511C5B6E6D00275896 /* CoreDataManager.m in Sources */,
 				2B094F231C5B6D5C00275896 /* RealmCoreData.xcdatamodeld in Sources */,
 				2B094F531C5B6E6D00275896 /* RealmDataManager.m in Sources */,
-				2B094F341C5B6DBA00275896 /* Person+CoreDataProperties.m in Sources */,
+				1D2B20171C6241DB00DCF673 /* Job+CoreDataProperties.m in Sources */,
 				2B094F171C5B6D5C00275896 /* main.m in Sources */,
 				2B094F411C5B6DF100275896 /* RealmJob.m in Sources */,
 				2B094F521C5B6E6D00275896 /* MigrationManager.m in Sources */,
+				1D2B20161C6241DB00DCF673 /* Person+CoreDataProperties.m in Sources */,
 				2B094F3A1C5B6DDD00275896 /* Job.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +460,7 @@
 				2B094F2E1C5B6D5C00275896 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

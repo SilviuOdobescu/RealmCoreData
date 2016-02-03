@@ -41,9 +41,15 @@ static dispatch_once_t onceToken;
         secondPerson.name = @"Jane";
         secondPerson.imageData = UIImagePNGRepresentation([UIImage imageNamed:@"secondAvatar"]);
         
+        Person *thirdPerson = (Person *)[NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:privateContext];
+        thirdPerson.name = @"Alex";
+        thirdPerson.imageData = UIImagePNGRepresentation([UIImage imageNamed:@"firstAvatar"]);
+        
         firstPerson.supervisor = secondPerson;
         firstPerson.job = firstJob;
         secondPerson.job = secondJob;
+        thirdPerson.job = firstJob;
+        thirdPerson.supervisor = secondPerson;
         
         NSError *error = nil;
         if ([privateContext hasChanges] && ![privateContext save:&error]) {
