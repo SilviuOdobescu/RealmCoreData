@@ -45,22 +45,24 @@ static dispatch_once_t onceToken;
     return persons;
 }
 
-- (id)addNewPerson:(NSString *)personName avatar:(NSData *)avatarData supervisor:(id)supervisor
+- (void)addNewPerson:(NSString *)personName avatar:(NSData *)avatarData job:(NSString *)jobName
 {
-    RealmPerson *newPerson = [RealmPerson new];
-    newPerson.name = personName;
-    newPerson.imageData = avatarData;
-    newPerson.supervisor = supervisor;
-    
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    // You only need to do this once (per thread)
-    
-    // Add to Realm with transaction
-    [realm beginWriteTransaction];
-    [realm addObject:newPerson];
-    [realm commitWriteTransaction];
-    
-    return newPerson;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        RealmPerson *newPerson = [RealmPerson new];
+        newPerson.name = personName;
+        newPerson.imageData = avatarData;
+        newPerson.job = [RealmJob objectsWhere:@"name == %@", jobName].firstObject;
+        
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        // You only need to do this once (per thread)
+        
+        // Add to Realm with transaction
+        [realm beginWriteTransaction];
+        [realm addObject:newPerson];
+        [realm commitWriteTransaction];
+        
+    });
 }
 
 - (void)insertInfoInRealm
@@ -84,6 +86,8 @@ static dispatch_once_t onceToken;
         firstPerson.job = firstJob;
         secondPerson.job = secondJob;
         
+        //
+        
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm beginWriteTransaction];
         [realm addOrUpdateObject:firstJob];
@@ -92,6 +96,45 @@ static dispatch_once_t onceToken;
         [realm addOrUpdateObject:secondPerson];
         [realm commitWriteTransaction];
         
+    });
+}
+
+- (id)personForName:(NSString *)personName
+{
+    RLMResults *personsResults = [RealmPerson objectsWhere:@"name == %@", personName];
+    RealmPerson *personToReturn = nil;
+    if(personsResults.count > 0)
+    {
+        personToReturn = personsResults.firstObject;
+    }
+    
+    return personToReturn;
+}
+
+- (id)findOrAddJob:(NSString *)jobName
+{
+    RLMResults *jobResults = [RealmJob objectsWhere:@"name == %@", jobName];
+    if(jobResults.count == 0)
+    {
+        [self addNewJob:jobName];
+    }
+    
+    return jobResults.firstObject;
+}
+
+- (void)mapPersonRelations:(NSDictionary *)mappingInfo
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm beginWriteTransaction];
+        NSArray *keys = [mappingInfo allKeys];
+        for(NSString *key in keys)
+        {
+            RealmPerson *firstPerson = [RealmPerson objectsWhere:@"name == %@", key].firstObject;
+            RealmPerson *secondPerson = [RealmPerson objectsWhere:@"name == %@", mappingInfo[key]].firstObject;
+            firstPerson.supervisor = secondPerson;
+        }
+        [realm commitWriteTransaction];
     });
 }
 

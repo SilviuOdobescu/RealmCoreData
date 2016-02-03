@@ -11,7 +11,7 @@
 
 @interface MigrationManager : NSObject
 
-- (instancetype)initWithInitialStore:(id<DataLayerManagerProtocol>)initialStore newStore:(id<DataLayerManagerProtocol>)newStore mappingInfo:(NSDictionary *)mappingInfo;
+- (instancetype)initWithInitialStore:(id<DataLayerManagerProtocol>)initialStore newStore:(id<DataLayerManagerProtocol>)newStore;
 - (void)initiateMigrationProcess;
 
 @end

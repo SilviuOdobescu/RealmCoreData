@@ -14,7 +14,11 @@
 + (id<DataLayerManagerProtocol>)sharedManager;
 - (id)getArrayOfPersons;
 - (id)addNewJob:(NSString *)jobName;
-- (id)addNewPerson:(NSString *)personName avatar:(NSData *)avatarData supervisor:(id)supervisor;
+- (void)addNewPerson:(NSString *)personName avatar:(NSData *)avatarData job:(NSString *)jobName;
+- (id)personForName:(NSString *)personName;
+//- (id)findOrAddPerson:(NSString *)personName avatar:(NSData *)avatarData
+- (id)findOrAddJob:(NSString *)jobName;
+- (void)mapPersonRelations:(NSDictionary *)mappingInfo;
 
 @end
 

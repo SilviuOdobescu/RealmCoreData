@@ -27,12 +27,9 @@
     [coreDataManager insertInfoInCoreData];
     
     RealmDataManager *realmManager = [RealmDataManager sharedManager];
-    [realmManager insertInfoInRealm];
+//    [realmManager insertInfoInRealm];
     
-    NSMutableDictionary *mappingDict = [NSMutableDictionary new];
-    
-    
-    self.migrationManager = [[MigrationManager alloc] initWithInitialStore:coreDataManager newStore:realmManager mappingInfo:mappingDict];
+    self.migrationManager = [[MigrationManager alloc] initWithInitialStore:coreDataManager newStore:realmManager];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
