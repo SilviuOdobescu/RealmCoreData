@@ -34,8 +34,6 @@
             coreDataPersonRecords = [privateContext executeFetchRequest:request error:&coreDataFetchError];
         }];
         
-        NSLog(@"==== core data information received: %@", coreDataPersonRecords);
-        
         RLMRealm *realm = [RLMRealm defaultRealm];
         
         NSMutableDictionary *supervisorMappingDictionary = [NSMutableDictionary new];
@@ -57,19 +55,19 @@
                 {
                     job = jobResults.firstObject;
                 }
-                
-                if(person.supervisor)
-                {
-                    supervisorMappingDictionary[person.name] = person.supervisor.name;
-                }
-                
-                RealmPerson *newPerson = [RealmPerson new];
-                newPerson.name = person.name;
-                newPerson.imageData = person.imageData;
-                newPerson.job = job;
-                
-                [objectsToAddToRealm addObject:newPerson];
             }
+            
+            if(person.supervisor)
+            {
+                supervisorMappingDictionary[person.name] = person.supervisor.name;
+            }
+            
+            RealmPerson *newPerson = [RealmPerson new];
+            newPerson.name = person.name;
+            newPerson.imageData = person.imageData;
+            newPerson.job = job;
+            
+            [objectsToAddToRealm addObject:newPerson];
         }
         
         [realm beginWriteTransaction];
