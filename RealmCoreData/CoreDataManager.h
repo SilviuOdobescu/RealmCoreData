@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "DataLayerManagerProtocol.h"
 
-@interface CoreDataManager : NSObject <DataLayerManagerProtocol>
+@interface CoreDataManager : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -20,5 +19,8 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 - (void)insertInfoInCoreData;
+
++ (CoreDataManager *)sharedManager;
+- (id)getArrayOfPersons;
 
 @end

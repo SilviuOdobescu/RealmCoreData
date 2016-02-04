@@ -35,19 +35,16 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    id<DataLayerManagerProtocol> dataSourceManager;
-    
     if(self.shouldLoadCoreData)
     {
         NSLog(@"==== loading Core Data");
-        dataSourceManager = [CoreDataManager sharedManager];
+        self.dataSource = [[CoreDataManager sharedManager] getArrayOfPersons];
     }
     else
     {
         NSLog(@"==== loading Realm");
-        dataSourceManager = [RealmDataManager sharedManager];
+        self.dataSource = [[RealmDataManager sharedManager] getArrayOfPersons];
     }
-    self.dataSource = [dataSourceManager getArrayOfPersons];
     [self.tableView reloadData];
 }
 

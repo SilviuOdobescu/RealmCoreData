@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataLayerManagerProtocol.h"
+#import "RealmJob.h"
+#import "RealmPerson.h"
 
-@interface RealmDataManager : NSObject < DataLayerManagerProtocol >
+@interface RealmDataManager : NSObject
 
 - (void)insertInfoInRealm;
++ (RealmDataManager *)sharedManager;
+- (id)getArrayOfPersons;
 
 @end

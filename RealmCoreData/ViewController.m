@@ -8,12 +8,11 @@
 
 #import "ViewController.h"
 #import "CoreDataManager.h"
-#import "MigrationManager.h"
 #import "RealmDataManager.h"
+#import "RealmDataManager+CoreDataMigration.h"
 
 @interface ViewController ()
 
-@property (nonatomic, strong) MigrationManager* migrationManager;
 
 @end
 
@@ -26,10 +25,9 @@
     CoreDataManager *coreDataManager = [CoreDataManager sharedManager];
     [coreDataManager insertInfoInCoreData];
     
-    RealmDataManager *realmManager = [RealmDataManager sharedManager];
+//    RealmDataManager *realmManager = [RealmDataManager sharedManager];
 //    [realmManager insertInfoInRealm];
     
-    self.migrationManager = [[MigrationManager alloc] initWithInitialStore:coreDataManager newStore:realmManager];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -52,7 +50,7 @@
 
 - (IBAction)convertToRealmButtonClicked:(id)sender
 {
-    [self.migrationManager initiateMigrationProcess];
+    [[RealmDataManager sharedManager] initiateMigrationProcess];
 }
 
 - (IBAction)resetEverythingButtonClicked:(id)sender
