@@ -13,7 +13,6 @@
 @interface RealmJob : RLMObject
 
 @property NSString *name;
-@property RealmPerson *person;
 
 @end
 

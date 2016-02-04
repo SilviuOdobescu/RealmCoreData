@@ -10,6 +10,9 @@
 #import "CoreDataManager.h"
 #import "RealmDataManager.h"
 #import "Person.h"
+#import "Job.h"
+#import "RealmPerson.h"
+#import "RealmJob.h"
 
 @implementation TableCell
 
@@ -56,6 +59,8 @@
     
     cell.personNameLabel.text = person.name;
     cell.personImageView.image = person.image;
+    cell.supervisorNameLabel.text = person.supervisor.name;
+    cell.personJobLabel.text = person.job.name;
     
     return cell;
 }

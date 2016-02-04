@@ -9,7 +9,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="job" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Job" inverseName="person" inverseEntity="Job" syncable="YES"/>
         <relationship name="supervisor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="teamMembers" inverseEntity="Person" syncable="YES"/>
-        <relationship name="teamMembers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="supervisor" inverseEntity="Person" syncable="YES"/>
+        <relationship name="teamMembers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="supervisor" inverseEntity="Person" syncable="YES"/>
     </entity>
     <elements>
         <element name="Job" positionX="-45" positionY="36" width="128" height="73"/>

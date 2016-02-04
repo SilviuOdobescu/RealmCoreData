@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D2B20161C6241DB00DCF673 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B20131C6241DB00DCF673 /* Person+CoreDataProperties.m */; };
-		1D2B20171C6241DB00DCF673 /* Job+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B20151C6241DB00DCF673 /* Job+CoreDataProperties.m */; };
 		2B094F171C5B6D5C00275896 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F161C5B6D5C00275896 /* main.m */; };
 		2B094F1A1C5B6D5C00275896 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F191C5B6D5C00275896 /* AppDelegate.m */; };
 		2B094F1D1C5B6D5C00275896 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F1C1C5B6D5C00275896 /* ViewController.m */; };
@@ -28,6 +26,8 @@
 		2B094F541C5B6E6D00275896 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F501C5B6E6D00275896 /* ResultsViewController.m */; };
 		2B094F591C5B70CD00275896 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B094F571C5B70B400275896 /* Realm.framework */; };
 		2B094F5A1C5B70CD00275896 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B094F571C5B70B400275896 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2BB3A5CD1C634E1F00A009C2 /* Job+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3A5CA1C634E1F00A009C2 /* Job+CoreDataProperties.m */; };
+		2BB3A5CE1C634E1F00A009C2 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3A5CC1C634E1F00A009C2 /* Person+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,10 +45,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1D2B20121C6241DB00DCF673 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
-		1D2B20131C6241DB00DCF673 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
-		1D2B20141C6241DB00DCF673 /* Job+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Job+CoreDataProperties.h"; sourceTree = "<group>"; };
-		1D2B20151C6241DB00DCF673 /* Job+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Job+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2B094F121C5B6D5C00275896 /* RealmCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B094F161C5B6D5C00275896 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B094F181C5B6D5C00275896 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +76,10 @@
 		2B094F4F1C5B6E6D00275896 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		2B094F501C5B6E6D00275896 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		2B094F571C5B70B400275896 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		2BB3A5C91C634E1F00A009C2 /* Job+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Job+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2BB3A5CA1C634E1F00A009C2 /* Job+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Job+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2BB3A5CB1C634E1F00A009C2 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2BB3A5CC1C634E1F00A009C2 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +145,10 @@
 		2B094F351C5B6DCD00275896 /* CoreData classes */ = {
 			isa = PBXGroup;
 			children = (
-				1D2B20121C6241DB00DCF673 /* Person+CoreDataProperties.h */,
-				1D2B20131C6241DB00DCF673 /* Person+CoreDataProperties.m */,
-				1D2B20141C6241DB00DCF673 /* Job+CoreDataProperties.h */,
-				1D2B20151C6241DB00DCF673 /* Job+CoreDataProperties.m */,
+				2BB3A5C91C634E1F00A009C2 /* Job+CoreDataProperties.h */,
+				2BB3A5CA1C634E1F00A009C2 /* Job+CoreDataProperties.m */,
+				2BB3A5CB1C634E1F00A009C2 /* Person+CoreDataProperties.h */,
+				2BB3A5CC1C634E1F00A009C2 /* Person+CoreDataProperties.m */,
 				2B094F361C5B6DDD00275896 /* Job.h */,
 				2B094F371C5B6DDD00275896 /* Job.m */,
 				2B094F381C5B6DDD00275896 /* Person.h */,
@@ -298,11 +298,11 @@
 				2B094F511C5B6E6D00275896 /* CoreDataManager.m in Sources */,
 				2B094F231C5B6D5C00275896 /* RealmCoreData.xcdatamodeld in Sources */,
 				2B094F531C5B6E6D00275896 /* RealmDataManager.m in Sources */,
-				1D2B20171C6241DB00DCF673 /* Job+CoreDataProperties.m in Sources */,
+				2BB3A5CE1C634E1F00A009C2 /* Person+CoreDataProperties.m in Sources */,
 				2B094F171C5B6D5C00275896 /* main.m in Sources */,
 				2B094F411C5B6DF100275896 /* RealmJob.m in Sources */,
 				2B094F521C5B6E6D00275896 /* MigrationManager.m in Sources */,
-				1D2B20161C6241DB00DCF673 /* Person+CoreDataProperties.m in Sources */,
+				2BB3A5CD1C634E1F00A009C2 /* Job+CoreDataProperties.m in Sources */,
 				2B094F3A1C5B6DDD00275896 /* Job.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  Person+CoreDataProperties.m
 //  RealmCoreData
 //
-//  Created by Silviu Odobescu on 03/02/16.
+//  Created by Silviu Odobescu on 04/02/16.
 //  Copyright © 2016 Silviu Odobescu. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

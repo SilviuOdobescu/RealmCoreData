@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *personImageView;
 @property (weak, nonatomic) IBOutlet UILabel *personNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *supervisorNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *personJobLabel;
 
 @end
 
