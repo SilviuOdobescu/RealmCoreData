@@ -24,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
 
+@property (nonatomic, strong) RLMResults *realmDataSource;
+@property (nonatomic, strong) RLMNotificationToken *notification;
+
 @end
 
 @implementation ResultsViewController
@@ -43,16 +46,21 @@
     else
     {
         NSLog(@"==== loading Realm");
-        self.dataSource = [[RealmDataManager sharedManager] getArrayOfPersons];
+        self.realmDataSource = [[RealmDataManager sharedManager] getArrayOfPersons];
     }
-    [self.tableView reloadData];
+    
+    // Set realm notification block
+    __weak typeof(self) weakSelf = self;
+    self.notification = [self.realmDataSource addNotificationBlock:^(RLMResults *data, NSError *error) {
+        [weakSelf.tableView reloadData];
+    }];
 }
 
 #pragma mark - UITableViewDataSource and Delegate methods
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
-    Person *person = self.dataSource[indexPath.row];
+    Person *person = self.shouldLoadCoreData? self.dataSource[indexPath.row] : self.realmDataSource[indexPath.row];
     
     cell.personNameLabel.text = person.name;
     cell.personImageView.image = person.image;
@@ -64,7 +72,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSource.count;
+    NSInteger count = self.shouldLoadCoreData? self.dataSource.count : self.realmDataSource.count;
+    return count;
 }
 
 #pragma mark - Private methods

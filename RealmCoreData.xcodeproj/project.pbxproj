@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D98952B1C639B3500F9C501 /* RealmDataManager+CoreDataMigration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D98952A1C639B3500F9C501 /* RealmDataManager+CoreDataMigration.m */; };
-		1D98952D1C63A7DC00F9C501 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D98952C1C63A7DC00F9C501 /* Realm.framework */; };
-		1D98952E1C63A7DC00F9C501 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D98952C1C63A7DC00F9C501 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B094F171C5B6D5C00275896 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F161C5B6D5C00275896 /* main.m */; };
 		2B094F1A1C5B6D5C00275896 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F191C5B6D5C00275896 /* AppDelegate.m */; };
 		2B094F1D1C5B6D5C00275896 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F1C1C5B6D5C00275896 /* ViewController.m */; };
@@ -28,6 +26,8 @@
 		2B094F541C5B6E6D00275896 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B094F501C5B6E6D00275896 /* ResultsViewController.m */; };
 		2BB3A5CD1C634E1F00A009C2 /* Job+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3A5CA1C634E1F00A009C2 /* Job+CoreDataProperties.m */; };
 		2BB3A5CE1C634E1F00A009C2 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3A5CC1C634E1F00A009C2 /* Person+CoreDataProperties.m */; };
+		2BDAE0FA1C68A059005543B0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDAE0F81C689F2A005543B0 /* Realm.framework */; };
+		2BDAE0FB1C68A059005543B0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDAE0F81C689F2A005543B0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1D98952E1C63A7DC00F9C501 /* Realm.framework in Embed Frameworks */,
+				2BDAE0FB1C68A059005543B0 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +47,6 @@
 /* Begin PBXFileReference section */
 		1D9895291C639B3500F9C501 /* RealmDataManager+CoreDataMigration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RealmDataManager+CoreDataMigration.h"; sourceTree = "<group>"; };
 		1D98952A1C639B3500F9C501 /* RealmDataManager+CoreDataMigration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RealmDataManager+CoreDataMigration.m"; sourceTree = "<group>"; };
-		1D98952C1C63A7DC00F9C501 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		2B094F121C5B6D5C00275896 /* RealmCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B094F161C5B6D5C00275896 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B094F181C5B6D5C00275896 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		2BB3A5CA1C634E1F00A009C2 /* Job+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Job+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2BB3A5CB1C634E1F00A009C2 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
 		2BB3A5CC1C634E1F00A009C2 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2BDAE0F81C689F2A005543B0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D98952D1C63A7DC00F9C501 /* Realm.framework in Frameworks */,
+				2BDAE0FA1C68A059005543B0 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +193,7 @@
 		2B094F561C5B709600275896 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D98952C1C63A7DC00F9C501 /* Realm.framework */,
+				2BDAE0F81C689F2A005543B0 /* Realm.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
